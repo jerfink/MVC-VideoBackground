@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <title>@ViewBag.Title | MVC Playground</title>
+    @Html.Partial("_Head")
+    @RenderSection("HeadContent", required: false)
+</head>
+
+    <body class="main_layout">
+        <header class="grid-container grid-parent header">
+            @Html.Partial("_Header")
+        </header>
+
+        <section class="grid-container main">
+            <div class="grid-100 mobile-grid-100 grid-parent inner">
+                @RenderBody()
+                @Html.Partial("_Navigation")
+            </div>
+        </section>
+
+        <footer class="grid-container grid-parent footer">
+            @Html.Partial("_Footer")
+        </footer>
+
+        @Html.Partial("_JavaScript")
+        @Html.Partial("_AjaxLoader")
+
+    </body>
+</html>
+

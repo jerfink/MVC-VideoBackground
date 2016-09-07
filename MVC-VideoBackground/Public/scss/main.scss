@@ -1,0 +1,72 @@
+@import "compass/css3";
+@import "base";
+
+nav a { color: #B69E3B; display: inline-block; font-size: 1.35em; font-weight: 400; letter-spacing: 1px; margin: 15px 25px; outline: medium none; position: relative; text-decoration: none; text-shadow: 0 0 1px rgba(255, 255, 255, 0.3); text-transform: uppercase; }
+
+.linkset { text-align: center; }
+
+.linkset_1 a { height: 45px; line-height: 45px; padding: 0 20px; cursor: pointer; }
+.linkset_1 a::before, .linkset_1 a::after { background: #B69E3B none repeat scroll 0 0; content: ""; height: 2px; opacity: 0.2; pointer-events: none; position: absolute; transition: all 0.3s ease 0s; width: 45px; }
+.linkset_1 a:hover::before, .linkset_1 a:hover::after { opacity: 1; }
+.linkset_1 a::before { left: 0; top: 0; transform: rotate(90deg); transform-origin: 0 0 0; }
+.linkset_1 a::after { bottom: 0; right: 0; transform: rotate(90deg); transform-origin: 100% 0 0; }
+.linkset_1 a:hover::before { left: 50%; transform: rotate(0deg) translateX(-50%); }
+.linkset_1 a:hover::after { right: 50%; transform: rotate(0deg) translateX(50%); }
+
+
+h2.primary { color: #808080; font-family: Arial,sans-serif; font-size: 1000%; letter-spacing: 1px; margin: 50px auto; text-align: center; }
+
+
+@supports (mix-blend-mode: color-burn) {
+    h2.primary { mix-blend-mode: color-burn; }
+}
+
+
+@supports not(mix-blend-mode: color-burn) {
+    h2.primary { opacity: 0.7; }
+}
+
+
+
+/** Remodal **/
+.remodal {
+    span { display: block; padding: 20px; }
+}
+
+
+.remodal[data-remodal-id="linkOneModal"] { background-color: #e14658; color: #fff; }
+
+.remodal[data-remodal-id="linkTwoModal"] { background-color: #22252c; color: #fff; }
+
+.remodal[data-remodal-id="linkThreeModal"] { background-color: #3f3250; color: #fff; }
+
+.remodal[data-remodal-id="linkFourModal"] { background-color: #c0b3a0; color: #fff; }
+
+.remodal[data-remodal-id="linkFiveModal"] { background-color: rgba(0, 0, 0, 0.6); color: #fff; }
+
+
+
+
+/** Feature Detection **/
+@supports (mix-blend-mode: hard-light) {
+    .remodal {
+        img { mix-blend-mode: hard-light; }
+    }
+}
+
+@supports not(mix-blend-mode: hard-light) {
+    .remodal {
+        img { opacity: 0.8; }
+    }
+}
+
+
+
+
+/** PAGE TWO **/
+#pageTwoBlock { width: 300px; height: 300px; background-color: rgba(0, 0, 0, .5); border: 1px solid #fff; margin: 20px auto;
+    span { opacity: 0.0; color: #fff; font-family: "Roboto", sans-serif; font-size: 90%; text-transform: uppercase; }
+    &:hover { cursor: pointer; background-color: #212121;
+        & span { opacity: 1.0; }
+    }
+}

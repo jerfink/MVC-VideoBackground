@@ -1,0 +1,323 @@
+/* line 2, ../scss/_base.scss */
+* {
+  -moz-transition: all 200ms ease 0s;
+  -o-transition: all 200ms ease 0s;
+  -webkit-transition: all 200ms ease;
+  -webkit-transition-delay: 0s;
+  transition: all 200ms ease 0s;
+}
+
+/* line 6, ../scss/_base.scss */
+html {
+  height: 100%;
+}
+
+/* line 8, ../scss/_base.scss */
+body {
+  background-color: black;
+  font-family: 'Arial', sans-serif;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+/* line 10, ../scss/_base.scss */
+#bgAfter {
+  background-image: url("../images/bg.jpg");
+  background-size: cover;
+  float: left;
+  min-height: 1000px;
+  position: fixed;
+  width: 100%;
+  z-index: -1;
+}
+
+/* line 12, ../scss/_base.scss */
+body.main_layout {
+  background-image: url("../images/bg.jpg");
+  background-size: cover;
+  float: left;
+  min-height: 1000px;
+  position: fixed;
+  width: 100%;
+  z-index: -1;
+}
+
+/* line 14, ../scss/_base.scss */
+img {
+  max-width: 100%;
+}
+
+/* line 16, ../scss/_base.scss */
+.start_hidden {
+  display: none;
+}
+
+/** FLEXBOX UTILITY**/
+/* line 20, ../scss/_base.scss */
+.vertical_flex {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  /* works with row or column */
+  flex-direction: row;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+/* line 21, ../scss/_base.scss */
+.row_flex {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  /* works with row or column */
+  flex-direction: row;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: flext-start;
+  justify-content: flext-start;
+}
+
+/** PAGE LINKS **/
+/* line 26, ../scss/_base.scss */
+.page_link {
+  border-bottom: 1px dashed #fff;
+  color: #fff;
+  font-family: "Roboto",sans-serif;
+  font-size: 200%;
+  padding: 5px 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+/* line 27, ../scss/_base.scss */
+.page_link:hover {
+  border: medium none;
+  background-color: #212121;
+  -moz-border-radius: 15px 0 15px 0;
+  -webkit-border-radius: 15px;
+  border-radius: 15px 0 15px 0;
+}
+
+/* line 30, ../scss/_base.scss */
+.main {
+  flex: 1;
+}
+
+/* line 32, ../scss/_base.scss */
+.fullscreen_bg {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: -100;
+}
+
+/* line 34, ../scss/_base.scss */
+.fullscreen_bg__video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+/* line 36, ../scss/_base.scss */
+header {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-bottom: 1px solid #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+/* line 39, ../scss/_base.scss */
+footer {
+  background-color: rgba(255, 255, 255, 0.4);
+  border-top: 1px solid #fff;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+/* line 40, ../scss/_base.scss */
+footer a {
+  color: #000000;
+  font-family: "Roboto",sans-serif;
+  font-size: 90%;
+  letter-spacing: 1px;
+  padding: 5px 10px;
+}
+
+/* line 4, ../scss/main.scss */
+nav a {
+  color: #B69E3B;
+  display: inline-block;
+  font-size: 1.35em;
+  font-weight: 400;
+  letter-spacing: 1px;
+  margin: 15px 25px;
+  outline: medium none;
+  position: relative;
+  text-decoration: none;
+  text-shadow: 0 0 1px rgba(255, 255, 255, 0.3);
+  text-transform: uppercase;
+}
+
+/* line 6, ../scss/main.scss */
+.linkset {
+  text-align: center;
+}
+
+/* line 8, ../scss/main.scss */
+.linkset_1 a {
+  height: 45px;
+  line-height: 45px;
+  padding: 0 20px;
+  cursor: pointer;
+}
+
+/* line 9, ../scss/main.scss */
+.linkset_1 a::before, .linkset_1 a::after {
+  background: #B69E3B none repeat scroll 0 0;
+  content: "";
+  height: 2px;
+  opacity: 0.2;
+  pointer-events: none;
+  position: absolute;
+  transition: all 0.3s ease 0s;
+  width: 45px;
+}
+
+/* line 10, ../scss/main.scss */
+.linkset_1 a:hover::before, .linkset_1 a:hover::after {
+  opacity: 1;
+}
+
+/* line 11, ../scss/main.scss */
+.linkset_1 a::before {
+  left: 0;
+  top: 0;
+  transform: rotate(90deg);
+  transform-origin: 0 0 0;
+}
+
+/* line 12, ../scss/main.scss */
+.linkset_1 a::after {
+  bottom: 0;
+  right: 0;
+  transform: rotate(90deg);
+  transform-origin: 100% 0 0;
+}
+
+/* line 13, ../scss/main.scss */
+.linkset_1 a:hover::before {
+  left: 50%;
+  transform: rotate(0deg) translateX(-50%);
+}
+
+/* line 14, ../scss/main.scss */
+.linkset_1 a:hover::after {
+  right: 50%;
+  transform: rotate(0deg) translateX(50%);
+}
+
+/* line 17, ../scss/main.scss */
+h2.primary {
+  color: #808080;
+  font-family: Arial,sans-serif;
+  font-size: 1000%;
+  letter-spacing: 1px;
+  margin: 50px auto;
+  text-align: center;
+}
+
+@supports (mix-blend-mode: color-burn) {
+  /* line 21, ../scss/main.scss */
+  h2.primary {
+    mix-blend-mode: color-burn;
+  }
+}
+@supports not (mix-blend-mode: color-burn) {
+  /* line 26, ../scss/main.scss */
+  h2.primary {
+    opacity: 0.7;
+  }
+}
+/** Remodal **/
+/* line 33, ../scss/main.scss */
+.remodal span {
+  display: block;
+  padding: 20px;
+}
+
+/* line 37, ../scss/main.scss */
+.remodal[data-remodal-id="linkOneModal"] {
+  background-color: #e14658;
+  color: #fff;
+}
+
+/* line 39, ../scss/main.scss */
+.remodal[data-remodal-id="linkTwoModal"] {
+  background-color: #22252c;
+  color: #fff;
+}
+
+/* line 41, ../scss/main.scss */
+.remodal[data-remodal-id="linkThreeModal"] {
+  background-color: #3f3250;
+  color: #fff;
+}
+
+/* line 43, ../scss/main.scss */
+.remodal[data-remodal-id="linkFourModal"] {
+  background-color: #c0b3a0;
+  color: #fff;
+}
+
+/* line 45, ../scss/main.scss */
+.remodal[data-remodal-id="linkFiveModal"] {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+}
+
+/** Feature Detection **/
+@supports (mix-blend-mode: hard-light) {
+  /* line 53, ../scss/main.scss */
+  .remodal img {
+    mix-blend-mode: hard-light;
+  }
+}
+@supports not (mix-blend-mode: hard-light) {
+  /* line 59, ../scss/main.scss */
+  .remodal img {
+    opacity: 0.8;
+  }
+}
+/** PAGE TWO **/
+/* line 67, ../scss/main.scss */
+#pageTwoBlock {
+  width: 300px;
+  height: 300px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 1px solid #fff;
+  margin: 20px auto;
+}
+/* line 68, ../scss/main.scss */
+#pageTwoBlock span {
+  opacity: 0.0;
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  font-size: 90%;
+  text-transform: uppercase;
+}
+/* line 69, ../scss/main.scss */
+#pageTwoBlock:hover {
+  cursor: pointer;
+  background-color: #212121;
+}
+/* line 70, ../scss/main.scss */
+#pageTwoBlock:hover span {
+  opacity: 1.0;
+}

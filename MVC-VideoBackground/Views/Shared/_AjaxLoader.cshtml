@@ -1,0 +1,18 @@
+﻿<div id="ajaxLoader">
+    <img src="//www.egroupnet.com/netcentive/images/ajaxLoader.gif" alt="Updating..."/>
+    Updating....
+</div>
+
+<script type="text/javascript">
+    $(function() {
+        $("#ajaxLoader").hide(); //hide initially
+        $("#ajaxLoader").ajaxStart(function() {
+            $(this).show();
+        });
+
+        $("#ajaxLoader").ajaxStop(function() {
+            $(this).hide();
+        });
+    });
+</script>
+

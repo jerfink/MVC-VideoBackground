@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <title>@ViewBag.Title | MVC Playground</title>
+    @Html.Partial("_Head")
+    @RenderSection("HeadContent", required: false)
+</head>
+
+<body>
+<div class="grid-100 mobile-grid-100 fullscreen_bg">
+    <video muted autoplay poster="@Url.Content("~/Public/images/bg.jpg")" class="fullscreen_bg__video" id="carInteriorVideo">
+        <source src="@Url.Content("~/Public/video/car_stuff.mp4")" type="video/mp4"/>
+        You browser does not support the <code>audio</code> element.
+    </video>
+</div>
+    <div class="start_hidden" id="bgAfter"></div>
+
+<header class="grid-container grid-parent header">
+    @Html.Partial("_Header")
+</header>
+<section class="grid-container main">
+    <div class="grid-100 mobile-grid-100 grid-parent inner">
+        @RenderBody()
+        @Html.Partial("_Navigation")
+    </div>
+</section>
+<footer class="grid-container grid-parent footer">
+    @Html.Partial("_Footer")
+</footer>
+
+
+
+
+@Html.Partial("_JavaScript")
+@Html.Partial("_AjaxLoader")
+</body>
+</html>
