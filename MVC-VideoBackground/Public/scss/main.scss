@@ -23,7 +23,7 @@ h2.primary { color: #808080; font-family: Arial,sans-serif; font-size: 1000%; le
 
 
 @supports not(mix-blend-mode: color-burn) {
-    h2.primary { opacity: 0.7; }
+    h2.primary { opacity: 0.65; }
 }
 
 
