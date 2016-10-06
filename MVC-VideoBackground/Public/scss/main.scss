@@ -69,4 +69,7 @@ h2.primary { color: #808080; font-family: Arial,sans-serif; font-size: 1000%; le
     &:hover { cursor: pointer; background-color: #212121;
         & span { opacity: 1.0; }
     }
+    &.im_gone { display: block; background-color: transparent; border: medium none; }
 }
+
+.cool_shadow_wrapper { margin: 20px auto; }

@@ -31,8 +31,17 @@ $(function () {
 
     $('#pageTwoBlock').click(function () {
         $(this).fadeOut($(this).attr("data-speed"), function () {
-            $(this).show();
+            $(this).addClass("im_gone").css("visibility", "hidden").show();
+            $('#showAgain span').text("Show Again ?");
         });
+
+
+        $('#showAgain').click(function () {
+            $('#pageTwoBlock').removeClass("im_gone").css("visibility", "visible");
+            $('#showAgain span').text("hover over the box");
+        });
+
+
 
         // calling custom console.log utility function
         $.log.group("This is a group of console.log(s)");
