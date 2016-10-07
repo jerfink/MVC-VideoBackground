@@ -50,3 +50,11 @@ $(function () {
     });
 
 });
+
+
+
+
+// PARTICLES STUFF
+particlesJS.load('particles-js', '/Public/js/particles/particles.json', function() {
+    console.log('callack - particles.js config loaded');
+});

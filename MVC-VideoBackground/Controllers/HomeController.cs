@@ -8,8 +8,6 @@ namespace MvcApplication1.Controllers
 {
     public class HomeController : Controller
     {
-        //
-        // GET: /Home/
 
         public ActionResult Index()
         {
@@ -17,6 +15,11 @@ namespace MvcApplication1.Controllers
         }
 
         public ActionResult PageTwo()
+        {
+            return View();
+        }
+
+        public ActionResult Particles()
         {
             return View();
         }

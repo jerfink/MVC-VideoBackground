@@ -145,6 +145,8 @@
     <Content Include="Public\js\jquery\jquery.1.11.2.min.js" />
     <Content Include="Public\js\log.js" />
     <Content Include="Public\js\main.js" />
+    <Content Include="Public\js\particles\particles.js" />
+    <Content Include="Public\js\particles\particles.min.js" />
     <Content Include="Public\js\plugins\remodal.min.js" />
     <Content Include="Public\video\279739896.mp4" />
     <Content Include="Public\video\car_stuff.mp4" />
@@ -181,6 +183,12 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Shared\_LayoutHomePage.cshtml" />
     <Content Include="Views\Shared\_Navigation.cshtml" />
+    <Content Include="Public\js\particles\bower.json" />
+    <Content Include="Public\js\particles\LICENSE.md" />
+    <Content Include="Public\js\particles\package.json" />
+    <Content Include="Public\js\particles\README.md" />
+    <Content Include="Views\Home\Particles.cshtml" />
+    <Content Include="Public\js\particles\particles.json" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
